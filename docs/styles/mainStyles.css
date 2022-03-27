@@ -44,10 +44,19 @@ body {
     font-size: 48px;
     color: var(--bb-brand-purple-900);
     margin: 0;
+}
+
+.header-title-container {
     flex-grow: 1;
 }
 
 .header-logo {
     height: 100%;
     width: auto;
+}
+
+.hero {
+    width: 100%;
+    background-image: url("https://braydenbabbitt.com/images/brayden-headshot.jpeg");
+    height: 80vh;
 }
