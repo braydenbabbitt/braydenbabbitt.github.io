@@ -57,6 +57,7 @@ body {
 
 .hero {
     width: 100%;
-    background-image: url("https://braydenbabbitt.com/images/brayden-headshot.jpeg");
+    background-image: url("https://braydenbabbitt.com/images/brayden-headshot.jpg");
+    background-size: cover;
     height: 80vh;
 }
