@@ -3,7 +3,11 @@
 :root {
     --primary-background: #FFFFFF;
     --secondary-background: #E8E8E8;
+    --primary-text-on-dark: #FFFFFF;
+    --primary-text-on-light: #18191b;
+    --transparent: rgba(0,0,0,0);
     --bb-brand-purple-900: #6116DC;
+    --gray-800: #292B2E;
 }
 
 html[data-theme='dark'] {
@@ -14,10 +18,11 @@ html[data-theme='dark'] {
 body {
     margin: 0;
     padding: 0;
+    height: 10000vh
 }
 
 .primary-theme {
-    background-color: var(--secondary-background);
+    background-color: var(--primary-background);
 }
 
 .header {
@@ -25,13 +30,12 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
     padding: 20px 98px 20px 20px;
     max-height: 88px;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    background-color: var(--primary-background);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--gray-800);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
 }
 
@@ -42,7 +46,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     font-size: 48px;
-    color: var(--bb-brand-purple-900);
+    color: var(--primary-text-on-dark);
     margin: 0;
 }
 
@@ -56,8 +60,34 @@ body {
 }
 
 .hero {
-    width: 100%;
-    background-image: url("https://braydenbabbitt.com/images/brayden-headshot.jpg");
-    background-size: cover;
+    display: flex;
+    max-width: 100%;
+    background-image: linear-gradient(to right, var(--primary-background) 0%, var(--transparent) 15%),
+        url("/images/brayden-headshot.jpg");
+    background-size: 50%;
+    background-position: right;
+    background-repeat: no-repeat;
     height: 80vh;
+    font-family: Alata, sans-serif;
+    text-transform: uppercase;
+    color: var(--primary-text-on-light);
+    position: static;
+    overflow: hidden;
+}
+
+.hero-title-block {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 4em;
+    padding: 0px 100px;
+    align-items: center;
+    align-content: center;
+}
+
+.hero-title {
+    display: flex;
+    letter-spacing: 0.05em;
+    flex-grow: 1;
 }
