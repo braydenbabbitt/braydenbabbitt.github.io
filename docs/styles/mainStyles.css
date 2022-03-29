@@ -7,6 +7,7 @@
     --primary-text-on-light: #18191b;
     --transparent: rgba(0,0,0,0);
     --bb-brand-purple-900: #6116DC;
+    --bb-brand-purple-500: #9165d8;
     --gray-800: #292B2E;
 }
 
@@ -21,6 +22,11 @@ body {
     height: 10000vh
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 .primary-theme {
     background-color: var(--primary-background);
 }
@@ -30,7 +36,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px 98px 10px 20px;
+    justify-items: space-evenly;
+    padding: 10px 25px 10px 25px;
     height: 50px;
     position: sticky;
     top: 0;
@@ -69,20 +76,47 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.header-title {
-    font-size: inherit;
-    font-family: inherit;
-    font: inherit;
-    margin: 0;
-}
-
-.header-title-container {
-    flex-grow: 1;
+.header-logo-container {
+    display: flex;
+    flex-shrink: 3;
+    height: 75%;
 }
 
 .header-logo {
+    display: flex;
+    flex-grow: 1;
     object-fit: contain;
     height: 100%;
+}
+
+.header-menu-container {
+    height: 100%;
+    font-size: 18px;
+    font-weight: 100;
+    text-transform: none;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: right;
+    align-items: center;
+}
+
+.header-menu-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.header-menu-item {
+    line-height: 100%;
+    font-weight: inherit;
+}
+
+.header-menu-link:hover {
+    line-height: 100%;
+    font-weight: inherit;
+    color: var(--bb-brand-purple-500);
 }
 
 .hero {
