@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
 
 :root {
     --primary-background: #FFFFFF;
@@ -9,6 +10,9 @@
     --bb-brand-purple-900: #6116DC;
     --bb-brand-purple-500: #9165d8;
     --gray-800: #292B2E;
+
+    --primary-font: 'Alata', sans-serif;
+    --secondary-font: 'Sarabun', sans-serif;
 }
 
 html[data-theme='dark'] {
@@ -32,7 +36,7 @@ a {
 }
 
 .header {
-    font-family: 'Alata', sans-serif;
+    font-family: var(--primary-font);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,7 +59,7 @@ a {
 }
 
 .smallHeader {
-    font-family: 'Alata', sans-serif;
+    font-family: var(--primary-font);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -78,6 +82,7 @@ a {
 
 .header-logo-container {
     display: flex;
+    align-items: center;
     flex-shrink: 3;
     height: 75%;
 }
@@ -89,9 +94,19 @@ a {
     height: 100%;
 }
 
-.header-menu-container {
+.header-title {
     height: 100%;
-    font-size: 18px;
+    margin: 0;
+    font-size: inherit;
+    line-height: 100%;
+    padding-left: 20px;
+    font-weight: 100;
+}
+
+.header-menu-container {
+    font-family: var(--secondary-font);
+    height: 100%;
+    font-size: 14px;
     font-weight: 100;
     text-transform: none;
     display: flex;
@@ -105,7 +120,8 @@ a {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 0 15px;
+    margin: 0 20px;
+    font-weight: inherit;
 }
 
 .header-menu-item {
