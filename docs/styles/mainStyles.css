@@ -148,9 +148,9 @@ a {
 .hero {
     display: flex;
     max-width: 100%;
-    background-image: linear-gradient(to right, var(--primary-background) 0%, var(--transparent) 15%),
+    background-image: linear-gradient(to right, var(--primary-background) 0%, var(--primary-background) 25%, var(--transparent) 35%),
         url("/images/brayden-headshot.jpg");
-    background-size: 50%;
+    background-size: 60%;
     background-position: right;
     background-repeat: no-repeat;
     height: 80vh;
@@ -159,7 +159,6 @@ a {
     color: var(--primary-text-on-light);
     position: static;
     overflow: hidden;
-    /* transition: 0.3s ease-in; */
 }
 
 .hero-title-block {
