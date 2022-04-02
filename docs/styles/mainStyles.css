@@ -23,7 +23,8 @@ html[data-theme='dark'] {
 body {
     margin: 0;
     padding: 0;
-    height: 10000vh
+    min-height: 100vh;
+    /* height: 10000vh */
 }
 
 a {
@@ -189,4 +190,13 @@ a {
     min-height: 100%;
     justify-self: right;
     align-self: center;
+}
+
+.fill-screen {
+    flex-grow: 1;
+}
+
+.fill-screen-container {
+    display: flex;
+    flex-direction: column;
 }
