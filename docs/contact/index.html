@@ -4,6 +4,22 @@
         <title>Contact | Brayden Babbitt's Portfolio</title>
         <link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml">
         <link rel="stylesheet" href="/styles/mainStyles.css">
+
+        <!-- Handle favicon color theme -->
+        <script>
+            var darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+            const faviconTag = document.getElementById("favicon");
+            handleThemeChange(darkModeQuery);
+            
+            function handleThemeChange(darkModeQuery) {
+                console.log("Dark mode is enabled: " + darkModeQuery.matches);
+
+                if (darkModeQuery.matches) faviconTag.href = "/images/favicon-dark.svg";
+                else faviconTag.href = "/images/favicon.svg";
+            }
+
+            darkModeQuery.addListener(handleThemeChange);
+        </script>
     </head>
     <body class="primary-theme">
         <div id="header" class="header">
