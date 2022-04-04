@@ -1,11 +1,11 @@
 {
-    "name": "countdown_timer",
-    "short_name": "countdown_timer",
+    "name": "Countdown Timer | Brayden Babbitt Flutter Projects",
+    "short_name": "Countdown Timer",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A simple countdown timer",
+    "description": "A simple countdown timer created by Brayden Babbitt using Flutter",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -18,15 +18,15 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A simple countdown timer">
+  <meta name="description" content="A simple countdown timer created by Brayden Babbitt using Flutter">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Countdown Timer">
+  <meta name="apple-mobile-web-app-title" content="Countdown Timer | Brayden Babbitt Flutter Projects">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <title>Countdown Timer | Brayden Babbitt Flutter Projects</title>
+  <title>countdown_timer</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="./icons/Timer Icon.svg" sizes="any" type="image/svg+xml">
 </head>
@@ -35,7 +35,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = '4249296985';
+    var serviceWorkerVersion = null;
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -97,6 +97,31 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+  </script>
+
+  <!-- Firebase script -->
+  <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+          apiKey: "AIzaSyBCePzQIpKwTjjYVG5vOkGXdUKY6fbVIXM",
+          authDomain: "braydenbabbitt-5a296.firebaseapp.com",
+          projectId: "braydenbabbitt-5a296",
+          storageBucket: "braydenbabbitt-5a296.appspot.com",
+          messagingSenderId: "187572856618",
+          appId: "1:187572856618:web:1a1fc41364d3ce678b6053",
+          measurementId: "G-TXPC8V8ZH3"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
   </script>
 </body>
 </html>
