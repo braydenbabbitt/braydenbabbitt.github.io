@@ -19,9 +19,9 @@ const RESOURCES = {
 "icons/Icon-maskable-192.png": "2e903bf2204de9f217396d50d542cd60",
 "icons/Icon-maskable-512.png": "ae6f5e65b579c76b14dde8fa21900fb1",
 "icons/Timer%20Icon.svg": "6843d36a8f2c013cfe57b53baa014b74",
-"index.html": "cc921669ec55fb577b521dcf0536202e",
-"/": "cc921669ec55fb577b521dcf0536202e",
-"main.dart.js": "6d7c73056d66d19e378cf7f7d2ac4efb",
+"index.html": "4af2daff32fc8530a76a4f68326a825e",
+"/": "4af2daff32fc8530a76a4f68326a825e",
+"main.dart.js": "f04460b0e777a9ec0002639d73059967",
 "manifest.json": "6c2149c3fe872c978590808dfd8d3f25",
 "start_program.vbs": "506835abaa07a39e4d3ce289c956d5b7",
 "version.json": "5253dded1b8cbd62ea70c7aaa805bc50"
