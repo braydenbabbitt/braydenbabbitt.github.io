@@ -197,6 +197,16 @@ a {
 }
 
 .fill-screen-container {
+    height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.centered-heading {
+    align-content: center;
+    font-size: 12vh;
+    text-align: center;
+    font-family: Alata, sans-serif;
+    font-weight: 400;
+    justify-content: center;
 }
