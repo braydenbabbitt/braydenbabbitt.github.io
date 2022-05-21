@@ -1,5 +1,5 @@
 import React from 'react';
-import NavHeader from '../components/NavHeader'
+import NavHeader from 'src/components/NavHeader/NavHeader'
 
 function About() {
   return (

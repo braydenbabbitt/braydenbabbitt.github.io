@@ -1,0 +1,76 @@
+@import "src/globalStyles/mainStyles.scss";
+@import "src/globalStyles/colors.scss";
+@import "src/globalStyles/fonts.scss";
+
+// Colors
+$background: $gray-800;
+$text: $white;
+$text-hover: $primary-accent-500;
+$active-text-hover: $primary-accent-800;
+
+// Sizes
+$horizontal-padding: 25px;
+$vertical-padding: 5px;
+
+// Transitions
+$header-link-color-transition: color 0.25s;
+
+.nav {
+  display: flex;
+  position: sticky;
+  height: 60px;
+  top: 0;
+  width: calc(100% - ($horizontal-padding * 2));
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: $vertical-padding $horizontal-padding;
+  background-color: $background;
+  color: $text;
+}
+
+.logo_link {
+  display: flex;
+  flex-shrink: 1;
+  align-items: center;
+}
+
+.logo {
+  height: calc(50px - ($vertical-padding * 2));
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  list-style: none;
+  font-family: $secondary-font;
+  font-weight: 100;
+  letter-spacing: 0.025em;
+  font-size: 21px;
+}
+
+.active_item {
+  font-weight: 900;
+  color: $text-hover;
+  transition: $header-link-color-transition;
+}
+
+.active_item:hover {
+  color: $active-text-hover;
+}
+
+.menu_link {
+  text-decoration: none;
+  color: inherit;
+  transition: $header-link-color-transition;
+}
+
+.menu_link:hover {
+  color: $text-hover;
+}
+
+// TODO: change useless class name
+.menu_item {
+  list-style: none;
+}
