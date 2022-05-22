@@ -1,3 +1,20 @@
+// Sizes
+$small-device-width: 320px;
+$large-device-width: 1000px;
+
+// Mixins
+@mixin small-device {
+  @media (min-width: #{$small-device-width}) and (max-width: calc($large-device-width - 1px)) {
+    @content;
+  }
+}
+
+@mixin large-device {
+  @media (min-width: #{$large-device-width}) {
+    @content;
+  }
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
@@ -11,5 +28,6 @@ a {
 }
 
 .Home {
-  
+  display: flex;
+  flex-direction: column;
 }

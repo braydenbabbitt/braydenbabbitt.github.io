@@ -12,26 +12,11 @@ $active-text-hover: $primary-accent-800;
 $height: 60px;
 $horizontal-padding: 25px;
 $vertical-padding: 5px;
-$small-device-width: 320px;
-$large-device-width: 1000px;
 $hamburger-menu-min-width: 125px;
 
 // Transitions
 $header-link-color-transition: color 0.25s;
 $hamburger-menu-transition: right 0.3s ease-in-out;
-
-// Mixins
-@mixin small-device {
-  @media (min-width: #{$small-device-width}) and (max-width: calc($large-device-width - 1px)) {
-    @content;
-  }
-}
-
-@mixin large-device {
-  @media (min-width: #{$large-device-width}) {
-    @content;
-  }
-}
 
 .nav {
   display: flex;
@@ -45,6 +30,7 @@ $hamburger-menu-transition: right 0.3s ease-in-out;
   padding: $vertical-padding $horizontal-padding;
   background-color: $background;
   color: $text;
+  z-index: 2;
 
   @include small-device {
     padding: calc($vertical-padding / 2) $horizontal-padding calc($vertical-padding / 2) calc($horizontal-padding / 2);
@@ -106,7 +92,7 @@ $hamburger-menu-transition: right 0.3s ease-in-out;
     gap: 20px;
     padding: calc($height + $vertical-padding) $horizontal-padding $vertical-padding $horizontal-padding;
     height: calc(100vh - ($height + ($vertical-padding * 2)));
-    z-index: -1;
+    z-index: 1;
     min-width: 125px;
     margin: 0;
   }
@@ -125,6 +111,8 @@ $hamburger-menu-transition: right 0.3s ease-in-out;
 }
 
 .hamburger_icon {
+  z-index: 2;
+  
   @include small-device {
     height: 1.5em;
     cursor: pointer;

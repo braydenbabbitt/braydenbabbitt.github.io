@@ -1,0 +1,43 @@
+@import "src/globalStyles/mainStyles.scss";
+@import "src/globalStyles/colors.scss";
+@import "src/globalStyles/fonts.scss";
+
+.first_page {
+  height: 100vh;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 3fr 1fr 2fr;
+  grid-template-rows: auto;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+
+  @include small-device {
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+}
+
+.hero_title {
+  font-size: 4em;
+  text-transform: uppercase;
+  padding: 0 5vw;
+  margin: auto 0;
+
+  @include small-device {
+    font-size: 7.5vw;
+    padding: 0 2vw;
+  }
+}
+
+.hero_image {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  object-fit: cover;
+  max-width: 100%;
+  min-height: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);
+  --webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);
+}
