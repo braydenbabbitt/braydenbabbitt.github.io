@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-// import 'src/globalStyles/mainStyles.scss';
 import styles from './NavHeader.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 function currentURLMatches(document: Document, matchURL: string) {
   const currentSubdirectory = document.location.pathname.split('/')[1];
@@ -26,19 +27,41 @@ class NavHeader extends React.Component<HeaderProps> {
 }
 
 interface HeaderMenuProps {
-
+  
 }
 
-class HeaderMenu extends React.Component<HeaderMenuProps> {
+interface HeaderMenuState {
+  expanded: boolean;
+}
+
+class HeaderMenu extends React.Component<HeaderMenuProps, HeaderMenuState> {
+  constructor(props: HeaderMenuProps) {
+    super(props);
+
+    this.state = {
+      expanded: false
+    };
+  }
+
   render() {
+    let menuClassName = `${styles.menu}`;
+    let icon = faBars;
+    if (this.state.expanded) {
+      menuClassName += ` ${styles.expanded_menu}`;
+      icon = faXmark;
+    }
+
     return (
-      <ul className={styles.menu}>
-        <Link className={styles.menu_link} to="/about"><HeaderMenuItem href="/about" text="About" /></Link>
-        <Link className={styles.menu_link} to="/work"><HeaderMenuItem href="/work" text="Work" /></Link>
-        <Link className={styles.menu_link} to="/apps"><HeaderMenuItem href="/apps" text="Apps" /></Link>
-        <HeaderMenuItem href="http://music.braydenbabbitt.com" text="Music" />
-        <Link className={styles.menu_link} to="/contact"><HeaderMenuItem href="/contact" text="Contact" /></Link>
-      </ul>
+      <span className={styles.menu_wrapper}>
+        <FontAwesomeIcon onClick={() => this.setState({ expanded: !this.state.expanded})} className={styles.hamburger_icon} icon={icon} />
+        <ul className={menuClassName} id="menu-content">
+          <Link className={styles.menu_link} to="/about"><HeaderMenuItem href="/about" text="About" /></Link>
+          <Link className={styles.menu_link} to="/work"><HeaderMenuItem href="/work" text="Work" /></Link>
+          <Link className={styles.menu_link} to="/apps"><HeaderMenuItem href="/apps" text="Apps" /></Link>
+          <HeaderMenuItem href="http://music.braydenbabbitt.com" text="Music" />
+          <Link className={styles.menu_link} to="/contact"><HeaderMenuItem href="/contact" text="Contact" /></Link>
+        </ul>
+      </span>
     );
   }
 }

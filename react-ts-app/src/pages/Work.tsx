@@ -3,7 +3,7 @@ import NavHeader from 'src/components/NavHeader/NavHeader'
 
 function Work() {
   return (
-    <div className="Work">
+    <div className="Work Body">
       <NavHeader />
       <h1>WORK</h1>
     </div>

@@ -3,7 +3,7 @@ import NavHeader from 'src/components/NavHeader/NavHeader'
 
 function Apps() {
   return (
-    <div className="Apps">
+    <div className="Apps Body">
       <NavHeader />
       <h1>APPS</h1>
     </div>

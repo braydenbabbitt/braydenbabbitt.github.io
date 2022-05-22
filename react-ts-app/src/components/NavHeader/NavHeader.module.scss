@@ -9,11 +9,29 @@ $text-hover: $primary-accent-500;
 $active-text-hover: $primary-accent-800;
 
 // Sizes
+$height: 60px;
 $horizontal-padding: 25px;
 $vertical-padding: 5px;
+$small-device-width: 320px;
+$large-device-width: 1000px;
+$hamburger-menu-min-width: 125px;
 
 // Transitions
 $header-link-color-transition: color 0.25s;
+$hamburger-menu-transition: right 0.3s ease-in-out;
+
+// Mixins
+@mixin small-device {
+  @media (min-width: #{$small-device-width}) and (max-width: calc($large-device-width - 1px)) {
+    @content;
+  }
+}
+
+@mixin large-device {
+  @media (min-width: #{$large-device-width}) {
+    @content;
+  }
+}
 
 .nav {
   display: flex;
@@ -27,20 +45,47 @@ $header-link-color-transition: color 0.25s;
   padding: $vertical-padding $horizontal-padding;
   background-color: $background;
   color: $text;
+
+  @include small-device {
+    padding: calc($vertical-padding / 2) $horizontal-padding calc($vertical-padding / 2) calc($horizontal-padding / 2);
+    width: calc(100% - ($horizontal-padding * 1.5));
+  }
 }
 
 .logo_link {
   display: flex;
   flex-shrink: 1;
   align-items: center;
+
+  @include small-device {
+    width: 65vw;
+  }
 }
 
 .logo {
-  height: calc(50px - ($vertical-padding * 2));
+  @include small-device {
+    width: 100%;
+    max-height: calc(50px - ($vertical-padding * 2));
+    display: flex;
+    float: left;
+  }
+
+  @include large-device {
+    height: calc(50px - ($vertical-padding * 2));
+  }
+}
+
+.menu_wrapper {
+  @include small-device {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px 0;
+    background-color: $background;
+  }
 }
 
 .menu {
-  display: flex;
   flex-direction: row;
   gap: 40px;
   list-style: none;
@@ -48,6 +93,46 @@ $header-link-color-transition: color 0.25s;
   font-weight: 100;
   letter-spacing: 0.025em;
   font-size: 21px;
+
+  @include small-device {
+    position: absolute;
+    transition: $hamburger-menu-transition;
+    background-color: $background;
+    right: -200px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding: calc($height + $vertical-padding) $horizontal-padding $vertical-padding $horizontal-padding;
+    height: calc(100vh - ($height + ($vertical-padding * 2)));
+    z-index: -1;
+    min-width: 125px;
+    margin: 0;
+  }
+
+  @include large-device {
+    position: static;
+    display: flex;
+  }
+}
+
+.expanded_menu {
+  @include small-device {
+    right: 0;
+    transition: $hamburger-menu-transition;
+  }
+}
+
+.hamburger_icon {
+  @include small-device {
+    height: 1.5em;
+    cursor: pointer;
+  }
+
+  @include large-device {
+    display: none;
+  }
 }
 
 .active_item {
