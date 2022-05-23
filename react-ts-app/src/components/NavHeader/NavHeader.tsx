@@ -4,7 +4,7 @@ import styles from './NavHeader.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
-function currentURLMatches(document: Document, matchURL: string) {
+function _currentURLMatches(document: Document, matchURL: string) {
   const currentSubdirectory = document.location.pathname.split('/')[1];
   console.log(`${currentSubdirectory} === ${matchURL}`);
   if (currentSubdirectory === matchURL) return true;
@@ -77,7 +77,7 @@ class HeaderMenuItem extends React.Component<HeaderMenuItemProps> {
     if (!this.props.href.startsWith('/')) isExternal = true;
 
     let linkClassName = `${styles.menu_item}`;
-    if (currentURLMatches(document, this.props.href.replace('/', ''))) linkClassName += ` ${styles.active_item}`;
+    if (_currentURLMatches(document, this.props.href.replace('/', ''))) linkClassName += ` ${styles.active_item}`;
     if (isExternal) {
       return (
         <a className={styles.menu_link} href={this.props.href}>
