@@ -9,6 +9,7 @@ function Apps() {
       <NavHeader />
       <div className={styles.card_list}>
         <Card external={true} imagePath='timer-image.png' title='Countdown Timer' description='A simple countdown timer written in Flutter' href='/apps/timer' />
+        <Card external={true} imagePath='spotify-logo.png' title='Spotify Algorithms' description='An app for creating algorithms to manipulate Spotify playlists written in Python. This is a WIP and currently has no UI.' href='https://github.com/braydenbabbitt/spotify_algorithms' />
       </div>
     </div>
   );
