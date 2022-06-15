@@ -7,12 +7,14 @@
 // Sizes
 $width: 225px;
 $height: 250px;
+$mobile-width: 65vw;
+$mobile-height: 65vw;
 $border-radius: 20px;
 $hover-scale: 1.075;
 
-.card_link {
-
-}
+// .card_link {
+// 
+// }
 
 .card {
   font-family: $primary-font;
@@ -20,29 +22,42 @@ $hover-scale: 1.075;
   background-color: $white;
   box-shadow: $card-shadow-200;
   width: $width;
-  height: $height;
+  min-height: $height;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: start;
   padding: calc($height * 0.1) calc($width * 0.1);
-  transition: background-color 0.3s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out, padding 0.3s ease-in-out, gap 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, width 0.3s ease-in-out, min-height 0.3s ease-in-out, padding 0.3s ease-in-out, gap 0.3s ease-in-out;
+
+  @include extra-small-device {
+    width: $mobile-width;
+    height: $mobile-height;
+    padding: calc($mobile-height * 0.1) calc($mobile-width * 0.1);
+  }
 }
 
 .card:hover {
   background-color: $primary-accent-100;
   width: calc($width * $hover-scale);
-  height: calc($height * $hover-scale);
+  min-height: calc($height * $hover-scale);
   padding: calc(($height * $hover-scale) * 0.1) calc(($width * $hover-scale) * 0.1);
+
+  @include extra-small-device {
+    width: $mobile-width;
+    height: $mobile-height;
+    padding: calc($mobile-height * 0.1) calc($mobile-width * 0.1);
+  }
 }
 
 .preview {
+  width: 100%;
+  object-fit: cover;
+}
+
+.icon {
   height: calc($height * 0.33);
   object-fit: contain;
 }
-
-// .info {
-
-// }
 
 .title {
   font-family: $primary-font;

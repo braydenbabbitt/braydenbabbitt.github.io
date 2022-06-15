@@ -1,6 +1,7 @@
 @import "src/globalStyles/mainStyles.scss";
 @import "src/globalStyles/colors.scss";
 @import "src/globalStyles/fonts.scss";
+// @import 'animate.css';
 
 .first_page {
   height: 100vh;
@@ -30,6 +31,11 @@
     font-size: 7.5vw;
     padding: 0 2vw;
   }
+}
+
+.title_load_1 {
+  animation: fadeInUp;
+  animation-duration: 1s;
 }
 
 .hero_image {

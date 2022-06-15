@@ -55,11 +55,11 @@ class HeaderMenu extends React.Component<HeaderMenuProps, HeaderMenuState> {
       <span className={styles.menu_wrapper}>
         <FontAwesomeIcon onClick={() => this.setState({ expanded: !this.state.expanded})} className={styles.hamburger_icon} icon={icon} />
         <ul className={menuClassName} id="menu-content">
-          <Link className={styles.menu_link} to="/about"><HeaderMenuItem href="/about" text="About" /></Link>
+          {/* <Link className={styles.menu_link} to="/about"><HeaderMenuItem href="/about" text="About" /></Link> */}
           <Link className={styles.menu_link} to="/work"><HeaderMenuItem href="/work" text="Work" /></Link>
           <Link className={styles.menu_link} to="/apps"><HeaderMenuItem href="/apps" text="Apps" /></Link>
-          <HeaderMenuItem href="http://music.braydenbabbitt.com" text="Music" />
-          <Link className={styles.menu_link} to="/contact"><HeaderMenuItem href="/contact" text="Contact" /></Link>
+          {/* <HeaderMenuItem href="http://music.braydenbabbitt.com" text="Music" /> */}
+          {/* <Link className={styles.menu_link} to="/contact"><HeaderMenuItem href="/contact" text="Contact" /></Link> */}
         </ul>
       </span>
     );

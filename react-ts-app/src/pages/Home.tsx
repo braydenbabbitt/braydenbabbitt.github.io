@@ -1,4 +1,5 @@
 import React from 'react';
+// import 'animate.css/animate.css';
 import NavHeader from 'src/components/NavHeader/NavHeader';
 import styles from './Home.module.scss';
 import 'src/globalStyles/mainStyles.scss';
