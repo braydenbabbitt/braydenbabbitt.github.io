@@ -8,7 +8,7 @@ function Apps() {
     <div className="Apps Body">
       <NavHeader />
       <div className={styles.card_list}>
-        <Card imagePath='timer-image.png' title='Countdown Timer' description='A simple countdown timer written in Flutter' href='/apps/timer' />
+        <Card external={true} imagePath='timer-image.png' title='Countdown Timer' description='A simple countdown timer written in Flutter' href='/apps/timer' />
       </div>
     </div>
   );
