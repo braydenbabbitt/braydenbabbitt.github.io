@@ -1,0 +1,40 @@
+// Sizes
+$extra-small-device-width: 500px;
+$small-device-width: 320px;
+$large-device-width: 1000px;
+
+// Mixins
+@mixin extra-small-device {
+  @media (min-width: #{$small-device-width}) and (max-width: #{$extra-small-device-width}) {
+    @content;
+  }
+}
+
+@mixin small-device {
+  @media (min-width: #{$small-device-width}) and (max-width: calc($large-device-width - 1px)) {
+    @content;
+  }
+}
+
+@mixin large-device {
+  @media (min-width: #{$large-device-width}) {
+    @content;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.Body {
+  max-width: 100vw;
+  min-height: 100vh;
+  // width: 100%;
+  overflow: clip;
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+}

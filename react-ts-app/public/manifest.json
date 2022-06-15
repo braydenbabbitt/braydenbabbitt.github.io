@@ -1,0 +1,14 @@
+{
+  "short_name": "BB Portfolio",
+  "name": "Brayden Babbitt's Portfolio",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
