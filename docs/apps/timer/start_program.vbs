@@ -1,0 +1,1 @@
+CreateObject("Wscript.shell").Run "countdown_timer.bat", 0, True
