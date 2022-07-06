@@ -12,10 +12,6 @@ $mobile-height: 65vw;
 $border-radius: 20px;
 $hover-scale: 1.075;
 
-// .card_link {
-// 
-// }
-
 .card {
   font-family: $primary-font;
   border-radius: $border-radius;
@@ -31,7 +27,7 @@ $hover-scale: 1.075;
 
   @include extra-small-device {
     width: $mobile-width;
-    height: $mobile-height;
+    min-height: 0;
     padding: calc($mobile-height * 0.1) calc($mobile-width * 0.1);
   }
 }
@@ -44,7 +40,7 @@ $hover-scale: 1.075;
 
   @include extra-small-device {
     width: $mobile-width;
-    height: $mobile-height;
+    min-height: 0;
     padding: calc($mobile-height * 0.1) calc($mobile-width * 0.1);
   }
 }

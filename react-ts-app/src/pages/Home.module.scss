@@ -17,7 +17,7 @@
   z-index: 0;
 
   @include small-device {
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -28,8 +28,9 @@
   margin: auto 0;
 
   @include small-device {
-    font-size: 7.5vw;
+    font-size: 15vw;
     padding: 0 2vw;
+    text-align: center;
   }
 }
 
@@ -46,4 +47,8 @@
   min-height: 100%;
   mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);
   --webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);
+
+  @include small-device {
+    display: none;
+  }
 }
