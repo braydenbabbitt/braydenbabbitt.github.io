@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styles from './Cards.module.scss';
+const colorContrast = require('color-contrast');
 
 interface CardProps {
   imagePath: string;
